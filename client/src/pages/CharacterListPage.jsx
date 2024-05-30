@@ -38,13 +38,15 @@ function CharacterListPage() {
   return (
     <>
       <h1 className="text-center mb-3">Character List</h1>
-      {data?.characters?.results && data.characters.results.map(el => {
-        return (
-          <>
-            <List key={el.id} data={el} />
-          </>
-        )
-      })}
+      <div>
+        {data?.characters?.results && data.characters.results.map(el => {
+          return (
+            <>
+              <List key={el.id} data={el} />
+            </>
+          )
+        })}
+      </div>
     </>
   )
 }

@@ -4,7 +4,7 @@ import './list.css'
 function List(props) {
   return (
     <div className="row">
-      <div className="col-md-8">
+      <div className="col-md">
         <div className="people-nearby">
           <div className="nearby-user">
             <div className="row">

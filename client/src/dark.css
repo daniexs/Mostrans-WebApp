@@ -1,0 +1,13 @@
+
+.app.dark{
+  background-color: #8f918e;
+  /* color: rgb(255, 255, 255); */
+  display: flex-start;
+  /* height: 100vh; */
+}
+.app{
+  /* display: flex; */
+  /* background-color: rgb(206, 163, 163); */
+  color: black;
+
+}

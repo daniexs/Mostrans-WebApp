@@ -9,11 +9,11 @@ function Card(props) {
           <div className="d-flex flex-column flex-lg-row">
             <div className="row flex-fill" >
               <span className="avatar avatar-text rounded-3 me-4" style={{ marginLeft: 10 }}>{props.data.i + 1}</span>
-              <div className="col" style={{ margin: "auto" }}>
+              <div className="col-5" style={{ margin: "auto" }}>
                 <h4 className="h5">{props.data.el.name}</h4>
               </div>
               {props.data.page === "location" &&
-                <Link to={props.data.el.id} className="col" style={{ margin: "auto" }}>
+                <Link to={props.data.el.id} className="col-4" style={{ margin: "auto" }}>
                   <button className="btn btn-primary rounded-pill">
                     View Character
                   </button>
