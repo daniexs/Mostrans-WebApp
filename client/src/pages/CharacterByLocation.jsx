@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client"
 import { useLocation, useParams } from "react-router-dom"
-import List from "../components/List"
+import imgLoading from '../assets/loading.gif'
 import Card from "../components/Card"
 
 const GET_LOCATION_Member = gql`
@@ -19,12 +19,21 @@ query GetLocation($id: ID!) {
 `
 function ListCharacterByLocation() {
   const { id } = useParams()
-  // const location = useLocation()
   const { loading, data, error } = useQuery(GET_LOCATION_Member, {
     variables: {
       id: id,
     },
   })
+
+  if (loading) {
+    return (
+      <>
+        <div className="loadings">
+          <img src={imgLoading} />
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <div className="text-center">

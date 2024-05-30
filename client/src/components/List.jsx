@@ -17,15 +17,15 @@ function List(props) {
               </div>
               <div className="col-5">
                 <h5>
-                  <Link to={'detail/' + props.data.id} className="profile-link">
+                  <Link to={'detail/' + props.data.id} className="profile-link text-dark">
                     {props.data.name}
                   </Link>
                 </h5>
                 <p>{props.data.status}</p>
               </div>
-              <div className='col'>
-                <button className='btn btn-primary pull-right'>Detail</button>
-              </div>
+              <Link to={'detail/' + props.data.id} className='col' style={{ margin: 'auto' }}>
+                <button className='btn btn-primary pull-right rounded-pill'>Detail</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react"
 import { useQuery, gql } from '@apollo/client'
 import List from "../components/List"
-import { Link } from 'react-router-dom'
+import imgLoading from '../assets/loading.gif'
 
 const GET_ALL_CHARACTER = gql`
   query GetAllCharacters{
@@ -24,18 +23,21 @@ const GET_ALL_CHARACTER = gql`
     }
   }
 `
-function CharacterListPage(params) {
+function CharacterListPage() {
   const { loading, data, error } = useQuery(GET_ALL_CHARACTER)
 
-  const [dataCharacter, setDataCharacter] = useState([])
-
-  useEffect(() => {
-
-  }, [])
-
+  if (loading) {
+    return (
+      <>
+        <div className="loadings">
+          <img src={imgLoading} />
+        </div>
+      </>
+    );
+  }
   return (
     <>
-      <h1>Character List</h1>
+      <h1 className="text-center mb-3">Character List</h1>
       {data?.characters?.results && data.characters.results.map(el => {
         return (
           <>

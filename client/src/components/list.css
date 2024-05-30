@@ -1,14 +1,16 @@
 
 body{
-  margin-top:20px;
+  margin-top:0px;
   background:#FAFAFA;    
 }
 
 .people-nearby .nearby-user{
 padding: 5px 0;
-border-top: 1px solid #f1f2f2;
-border-bottom: 1px solid #f1f2f2;
+border-top: 1px solid #73e96f;
+border-bottom: 1px solid #73e96f;
 margin-bottom: 10px;
+border-radius: 2rem;
+background-color: #ddefdc;
 }
 
 img.profile-photo-lg{

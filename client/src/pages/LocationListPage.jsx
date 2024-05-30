@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client"
 import Card from "../components/Card.jsx";
+import imgLoading from '../assets/loading.gif'
 
 const GET_ALL_Location = gql`
 query {
@@ -16,10 +17,19 @@ query {
 
 function LocationListPage(params) {
   const { loading, data, error } = useQuery(GET_ALL_Location)
+  if (loading) {
+    return (
+      <>
+        <div className="loadings">
+          <img src={imgLoading} />
+        </div>
+      </>
+    );
+  }
   return (
     <>
-      <div className="text-center mb-5">
-        <h3>List Location</h3>
+      <div className="text-center mb-4">
+        <h1>List Location</h1>
       </div>
       {data?.locations.results.map((el, i) => {
         return (

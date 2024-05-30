@@ -26,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'location/:id',
         element: <ListCharacterByLocation />
+      },
+      {
+        path: 'location/update/:id',
+        element: <UpdateLocationPage />
       }
     ]
   }
